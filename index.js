@@ -49,10 +49,21 @@ addEventListener('click', event => {
 
 
 // 6. Вопрос: Почему в console.log пишется сначала текст из 5 задания и только потом выводится текст из 3 задания, если мы кликаем по кнопкам в ul? Ответ необходимо написать здесь же, под этим комментарием, своими словами. 
-
+//Конфликтует DOM с событиями.
 // 7. С помощью JS необходимо изменить цвет заднего фона каждого второго тега li.
-const x = document.children.querySelectorAll('li'); 
+// const x = document.querySelectorAll('li'); 
 
-for (let i = 0; i < x.length; i++) {
-x[1].style.backgroundColor = 'red'; 
-}
+// for (let i = 0; i < x.length; i++) {
+//  x[i].style.backgroundColor = 'red'; 
+//  }
+
+// const liEl = document.querySelectorAll(`li`);
+// for (let i = 0; i < liEl.length; i++) {
+//     liEl[i].style.backgroundColor = '#red';
+// }
+  const li = document.querySelectorAll("li:nth-child(even)");
+          for (let i = 1; i < li.length; i+2) {
+              li[i].style.backgroundColor = "red";
+                      
+            }
+
