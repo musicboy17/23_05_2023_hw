@@ -61,9 +61,14 @@ addEventListener('click', event => {
 // for (let i = 0; i < liEl.length; i++) {
 //     liEl[i].style.backgroundColor = '#red';
 // }
-  const li = document.querySelectorAll("li:nth-child(even)");
-          for (let i = 1; i < li.length; i+2) {
-              li[i].style.backgroundColor = "red";
+  // const liEl = document.querySelectorAll("li:nth-child(even)");
+  //         for (let i = 1; i < liEl.length; i+2) {
+  //             liEl[i].style.backgroundcolor = "red";
                       
-            }
+  //           }
 
+const liElements = document.querySelectorAll('li');
+
+for (let i = 1; i < liElements.length; i += 2) {
+    liElements[i].style.backgroundColor = 'red';
+}
