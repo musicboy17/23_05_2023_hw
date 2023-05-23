@@ -31,9 +31,6 @@ document.addEventListener('click', event => {
 });
 
 
-
-
-
 // 4. Сделайте, чтобы при наведении на textarea в консоли появлялось сообщение: "Вы навели на textarea."
 // ***
 document.addEventListener('mouseover', event => {
@@ -54,13 +51,8 @@ addEventListener('click', event => {
 // 6. Вопрос: Почему в console.log пишется сначала текст из 5 задания и только потом выводится текст из 3 задания, если мы кликаем по кнопкам в ul? Ответ необходимо написать здесь же, под этим комментарием, своими словами. 
 
 // 7. С помощью JS необходимо изменить цвет заднего фона каждого второго тега li.
+const x = document.children.querySelectorAll('li'); 
 
-// const liEls = document.querySelectorAll('li');
-        // for (let i = 0; i < liEls.length; i++) {
-        //     if (i % 2 !== 0) liEls[i].style.backgroundColor = 'red';
-        // }
-
-        const liEls = document.querySelectorAll('li');
-        for (let i = 0; i < liEls.length; i++) {
-            if (i % 2 !== 0) liEls[i].style.backgroundColor = 'red';
-        }
+for (let i = 0; i < x.length; i++) {
+x[1].style.backgroundColor = 'red'; 
+}
